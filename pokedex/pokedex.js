@@ -2,7 +2,7 @@ let form = document.querySelector('#pokedex-form');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    let pokemon = event.path[0][0].value
+    let pokemon = event.composedPath()[0][0].value
     loadPokemon(pokemon);
     form.reset();
 })
